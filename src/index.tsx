@@ -60,26 +60,6 @@ const MyButton = (props: MyButtonProps) => {
   );
 };
 
-const MyButton2 = () => {
-  let [count, setCount] = useState(0);
-
-  const handlButtonClick = () => {
-    setCount(++count);
-  };
-
-  return (
-    <>
-      <p>
-        <button onClick={handlButtonClick} value={count}>
-          {count}
-        </button>
-        <br />
-        {isOdd(count) ? "Ímpar" : "Par"}
-      </p>
-    </>
-  );
-};
-
 function App() {
   let [counts, setCount] = useState([0, 0, 0]);
   let [total, setTotal] = useState(0);
@@ -102,7 +82,6 @@ function App() {
       <Name name="teste1" idade={2} cidadeNatal="Florianópolis" />
       <Name name="teste2" idade={32} cidadeNatal="Palhoça" />
       <p />
-      <MyButton2 />
       <Name name="teste3" idade={12} />
       <p />
       <MyButton id={0} count={counts[0]} setCount={handlButtonClick} />
